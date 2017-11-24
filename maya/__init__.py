@@ -66,7 +66,8 @@ def uninstall_tasks():
     """
     Uninstall all tasks' plugins
     """
-    for task in _load_tasks().values():
+    loaded_tasks = _load_tasks()
+    for task in loaded_tasks.values():
         task.uninstall()
 
 
